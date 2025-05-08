@@ -1,7 +1,7 @@
 {
-  "domain": "Ticket_todo",
+  "domain": "ticket_todo",
   "name": "Ticket To-do",
-  "codeowners": ["@allenporter"],
+  "codeowners": ["@fouton123"],
   "config_flow": true,
   "documentation": "https://github.com/Fouton123/HA-Ticket-System",
   "iot_class": "local_polling",
