@@ -103,6 +103,7 @@ def _convert_item(item: TodoItem) -> Todo:
     if todo.due and not isinstance(todo.due, datetime.datetime):
         todo.due += datetime.timedelta(days=1)
     todo.description = item.description
+    todo.location = "Detroit"
     return todo
 
 
