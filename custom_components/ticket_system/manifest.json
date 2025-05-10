@@ -3,6 +3,7 @@
   "name": "Ticket To-do",
   "codeowners": ["@fouton123"],
   "config_flow": true,
+  "dependencies": ["http", "panel_custom"],
   "documentation": "https://github.com/Fouton123/HA-Ticket-System",
   "iot_class": "local_polling",
   "requirements": ["ical==9.2.0"],
