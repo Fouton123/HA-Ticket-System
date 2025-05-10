@@ -33,15 +33,15 @@ async def async_setup_entry(hass: HomeAssistant, entry: LocalTodoConfigEntry) ->
     entry.runtime_data = store
 
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
-
-    await async_register_panel(hass)
+    async_unregister_panel(hass)
+    #await async_register_panel(hass)
 
     return True
 
 
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Unload a config entry."""
-    async_unregister_panel(hass)
+    #async_unregister_panel(hass)
     return await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
 
 
@@ -53,5 +53,5 @@ async def async_remove_entry(hass: HomeAssistant, entry: ConfigEntry) -> None:
     def unlink(path: Path) -> None:
         path.unlink(missing_ok=True)
 
-    async_unregister_panel(hass)
+    #async_unregister_panel(hass)
     await hass.async_add_executor_job(unlink, path)
